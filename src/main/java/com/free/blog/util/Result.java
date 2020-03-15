@@ -5,15 +5,13 @@ import lombok.Data;
 @Data
 public class Result {
 
-    private boolean status;//是否成功
-    private Integer errorCode;//错误码
+    private Integer errorCode;//错误码，1表示成功，0表示失败
     private String msg;//错误信息
 
     public Result() {
     }
 
-    public Result(boolean status, Integer errorCode, String msg) {
-        this.status = status;
+    public Result(Integer errorCode, String msg) {
         this.errorCode = errorCode;
         this.msg = msg;
     }
